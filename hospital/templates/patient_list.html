@@ -1,0 +1,13 @@
+<h1>All paitients</h1>
+<ol>
+    {% for paitient in patients %}
+        <li>
+            age: {{ paitient.age }},
+            sex: {{ paitient.sex }},
+            ecog: {{ paitient.ecog.get_value_display }},
+            blood type: {{ paitient.bloodtype.get_value_display }},
+            images:
+            {% for image in paitient.imaging.types.all %}{{ image.get_value_display }},{% endfor %}
+        </li>
+    {% endfor %}
+</ol>

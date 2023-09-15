@@ -34,7 +34,6 @@ class Imaging(models.Model):
     patient = models.OneToOneField(Patient, on_delete=models.CASCADE, primary_key=True)
 
 
-
 class ImageryType(models.Model):
     IMAGING_CHOICES = (
         (0, "CT"),
